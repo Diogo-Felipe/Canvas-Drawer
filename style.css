@@ -1,5 +1,22 @@
+.painel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 1020px;
+}
+
+.pencil-input{
+    width: 70px;
+    height: 36px;
+
+    border: 0;
+
+    border-radius: 4px;
+}
+
 .painel-button{
-    width: 36px;
+    width: auto;
     height: 36px;
 
     border: 2px solid black;

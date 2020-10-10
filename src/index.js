@@ -1,6 +1,16 @@
+let pencilColorInput = document.getElementById('pencil');
+pencilColor = pencilColorInput.value;
+
+
 let canvas = new Canvas();
 
-let pencil = new Pencil("#cc22cc", 2, canvas.context);
+let pencil = new Pencil(pencilColor, 2, canvas.context);
+
+pencilColorInput.addEventListener('change', () => {
+    pencilColor = pencilColorInput.value;
+
+    pencil.color = pencilColor;
+});
 
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', (event) => {

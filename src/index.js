@@ -1,18 +1,28 @@
+let clearButton = document.getElementById('clear');
+
+let eraserButton = document.getElementById('eraser');
+
 let pencilColorInput = document.getElementById('pencil');
 pencilColor = pencilColorInput.value;
 
-
 let canvas = new Canvas();
-
 let pencil = new Pencil(pencilColor, 2, canvas.context);
 
 pencilColorInput.addEventListener('change', () => {
     pencilColor = pencilColorInput.value;
-
     pencil.color = pencilColor;
 });
 
-let clearButton = document.getElementById('clear');
+pencilColorInput.addEventListener('click', () => {
+    pencilColor = pencilColorInput.value;
+    pencil.color = pencilColor;
+});
+
+eraserButton.addEventListener('click', () =>{
+    pencil.color = "#fff";
+});
+
+
 clearButton.addEventListener('click', (event) => {
     event.preventDefault();
     canvas.clearAll();

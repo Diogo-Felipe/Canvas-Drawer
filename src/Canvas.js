@@ -1,7 +1,7 @@
 
 class Canvas {
 
-    constructor(){
+    constructor() {
         this.tela = document.getElementById('canvas');
         this.context = this.tela.getContext("2d");
 
@@ -10,7 +10,7 @@ class Canvas {
         this.mouseDown = false;
     }
 
-    clearAll(){
+    clearAll() {
         this.context.clearRect(0, 0, this.tela.width, this.tela.height);
     }
 }
